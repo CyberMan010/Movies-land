@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="details.css">
+    <title>Movie-Details</title>
+</head>
+<body>
+    
+ <div id="personname"></div><br><br><br>
+<!-- <div id="comment"></div> -->
+<div id="story"></div><br><br><br><br>
+<div id="title"></div><br>
+<div id="catalog"></div><br><br><br><br>
+<!-- COmment section  -->
+<div class="container">
+  <form id="commentForm">
+    <input type="text" id="commentInput" placeholder="Enter your comment" required>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="commentsList"></div>
+</div>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  
+<script>
+
+const userDataStr = sessionStorage.getItem("user");
+if (userDataStr) {
+        const userData = JSON.parse(userDataStr);
+        const username = userData.username;
+
+      //  const welcomeMsgElement = document.getElementById("wolcome-msg");
+        console.log(userData);
+        console.log(username);
+      //  console.log(welcomeMsgElement);
+     //   welcomeMsgElement.innerHTML = "Welcome, " + username + "!";
+      } else {
+        console.log("No user data found in sessionStorage");
+      }
+    
+let selectedStory = JSON.parse(sessionStorage.getItem('selectedStory'));
+
+// Example: Display personname in a div with id "personName"
+document.getElementById("personname").textContent = selectedStory.personname;
+document.getElementById("story").textContent = selectedStory.story;
+document.getElementById("title").textContent = selectedStory.title;
+document.getElementById("catalog").textContent = selectedStory.catalog;
+
+
+
+ 
+ 
+
+
+</script>
+<script src="details.js"></script>
+</body>
+</html>

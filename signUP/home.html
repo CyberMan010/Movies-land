@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+		
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  
+     
+     <!-- this is to show sucssess story  -->
+
+
+
+     <script src="jsFetch.js"></script>
+  
+
+     <!-- here to show welcome name  -->
+
+
+
+    <h1 id="wolcome-msg"></h1>
+    <script>
+
+      sessionStorage.setItem("user", userDataTOs);
+      const userDataStr = sessionStorage.getItem("user");
+
+      if (userDataStr) {
+        const userData = JSON.parse(userDataStr);
+        const username = userData.username;
+
+        const welcomeMsgElement = document.getElementById("wolcome-msg");
+        console.log(userData);
+        console.log(username);
+        console.log(welcomeMsgElement);
+        welcomeMsgElement.innerHTML = "Welcome, " + username + "!";
+      } else {
+        console.log("No user data found in sessionStorage");
+      }
+    </script>
+
+
+
+
+
+<section  id="stream"></section>
+
+
+
+
+
+
+
+  </body>
+</html>

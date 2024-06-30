@@ -1,0 +1,102 @@
+/*
+Template Name: Play Show
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************account****************/
+.main_account{
+ background-image: url(../img/32.jpg);
+ background-position: center; 
+ }
+.account_1l .form-control{
+height:60px; 
+ }
+.input-group-text{
+border-color:#e901011f;  
+ }
+.main_contact{
+ background-image: url(../img/34.jpg);
+ background-position: center; 
+ }
+ 
+.contact_1{
+box-shadow: 0px 0px 7px 0px #e901011f; 
+padding:20px 10px; 
+ }
+.blog_1d3il .form-control {
+height: 60px;
+}
+.blog_1d3il .form_text {
+height: 180px;
+}
+/*********************account_end****************/
+
+
+@media screen and (max-width : 767px){
+.contact_1i {
+margin-top:10px;
+margin-bottom:10px;
+text-align:center; 
+ }
+.blog_1d3il .form-control{
+margin-top:15px; 
+ }
+.blog_1d3il h5{
+text-align:center;
+margin-bottom:15px;
+ }
+.contact_1 {
+margin-bottom:20px!important; 
+ }
+.icon_line:before {
+width: 40%;
+}
+.icon_line:after {
+width: 40%;
+}
+.account_1l li{
+margin:0!important;
+margin-bottom:10px!important; 
+ }
+.account_1l h2{
+text-align:center; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.account_1r img{
+min-height:670px; 
+ }
+.icon_line:before {
+width: 40%;
+}
+.icon_line:after {
+width: 40%;
+}
+
+.account_1l  .button_2{
+ padding:23px 20px 20px 20px!important;
+ font-size:14px;
+ }
+.account_1l  .button_1{
+ padding:23px 20px 20px 20px!important;
+ font-size:14px;
+ }
+
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+

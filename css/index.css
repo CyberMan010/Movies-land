@@ -1,0 +1,220 @@
+/*
+Template Name: Play Show
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************center_home****************/
+.carousel-caption{
+text-align:left;
+background-color: rgba(0, 0, 0, 0.7);
+padding:150px 150px;
+bottom:0;
+left:0;
+width:100%;
+height:100%;
+color:#fff;
+ }
+.carousel-caption p{
+width:45%;
+ }
+.carousel-indicators{
+bottom:0; 
+ }
+.center_home .carousel-indicators [data-bs-target] {
+ background-color: #e90101;
+}
+
+.release{
+border-left:3px solid #e90101; 
+ }
+.rating{
+border:2px solid #65ee5b;
+width:40px;
+height:40px;
+line-height:40px;
+text-align:center; 
+ }
+/*********************center_home_end****************/
+
+
+/*********************spec****************/
+.spec_1imi1l .span_2{
+padding:5px 5px 2px 5px; 
+ }
+.spec_1imi1{
+padding-top:180px;
+padding-left:10px;
+padding-right:10px;
+ }
+.spec_1imi1l h6{
+border:1px solid #fff; 
+ }
+.spec_1im:hover .spec_1imi1{
+background-color: rgba(0, 0, 0, 0.8);
+ }
+.spec_1im1 .span_1{
+border:1px solid #fff;
+padding:5px 5px 2px 5px;   
+ }
+/*********************spec_end****************/
+
+/*********************testim****************/
+#testim .carousel-indicators {
+bottom: -50px;
+}
+#testim .carousel-indicators [data-bs-target] {
+ background-color: #e90101;
+}
+/*********************testim_end****************/
+
+/*********************price****************/
+#price {
+background-image: url(../img/3.jpg);
+background-position: center;
+}
+.save{
+background: #fde5e5;
+padding:10px 20px 6px 20px;
+border-radius:30px;
+ }
+/*********************price_end****************/
+
+
+@media screen and (max-width : 767px){
+.center_home img{
+min-height:450px; 
+ }
+.carousel-caption{
+padding:90px 15px 0px 15px;
+ }
+.carousel-caption .font_80{
+font-size:22px;
+ }
+.carousel-caption p{
+width:100%;
+font-size:14px;
+ }
+.carousel-caption h6{
+font-size:12px;
+ }
+.carousel-caption .button {
+padding: 13px 40px 10px 40px!important;
+}
+.exep1r{
+margin-top:15px;
+text-align:center; 
+ }
+.exep1r p{
+text-align:left; 
+ }
+#spec .pe-0 {
+padding-right:12px!important;
+ }
+.spec_1imi1 {
+padding-top:10px;
+ }
+.spec_1im1 {
+margin-bottom:15px; 
+ }
+.testim_1i1  p{
+text-align:left; 
+ }
+.testim_1i1 {
+margin-bottom:15px; 
+ }
+.price_1i {
+margin-bottom:15px; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.center_home img{
+min-height:600px; 
+ }
+.carousel-caption .font_80{
+font-size:40px;
+ }
+.carousel-caption{
+padding:130px 150px;
+ }
+#stream .stream_2im1 img{
+min-height:380px; 
+ }
+#stream  .stream_2im2  h6 a{
+font-size:30px;
+ }
+#stream  .stream_2im2  h4{
+font-size:20px;
+ }
+.exep1l img{
+min-height:450px; 
+ }
+.exep1ril .font_60{
+font-size:40px; 
+ }
+.spec_1imi1{
+padding-top:20px; 
+ }
+ .spec_1im1 {
+margin-bottom:15px; 
+ }
+#spec .pe-0 {
+padding-right:12px!important;
+ }
+#stream .pe-0 {
+padding-right:12px!important;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.center_home img{
+min-height:600px; 
+ }
+.carousel-caption .font_80{
+font-size:40px;
+ }
+.carousel-caption{
+padding:130px 150px;
+ }
+#stream .stream_2im1 img{
+min-height:380px; 
+ }
+#stream .pe-0 {
+padding-right:12px!important;
+ }
+.exep1l img{
+min-height:450px; 
+ }
+.rating {
+width: 30px;
+height: 30px;
+line-height: 30px;
+margin-top:5px;
+}
+.spec_1imi img{
+min-height:230px; 
+ }
+#spec .pe-0 {
+padding-right:12px!important;
+ }
+.spec_1im1 h5{
+font-size:14px!important; 
+ }
+ }
+@media (min-width:1201px) and (max-width:1280px) {
+.center_home img{
+min-height:600px; 
+ }
+.carousel-caption .font_80{
+font-size:60px;
+ }
+ }
+
+

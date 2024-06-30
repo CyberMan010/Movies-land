@@ -1,0 +1,129 @@
+/*
+Template Name: Play Show
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************blog****************/
+.main_blog{
+ background-image: url(../img/26.jpg);
+ background-position: center; 
+ }
+.stream_2im2{
+padding-top:280px!important;
+ }
+.blog_1r1 .form-control{
+height:60px; 
+ }
+.blog_1r1{
+border-left:3px solid #e90101; 
+ }
+.blog_1r1 .tag li a {
+padding: 7px 12px 6px;
+background: #e9010108;
+margin: 0px 2px 6px 0px;
+}
+.blog_1r1 .tag li a:hover {
+background:#e90101; 
+color:#fff;
+}
+.main_blog_dt{
+ background-image: url(../img/27.jpg);
+ background-position: center;  
+ }
+.blog_1dt3ir .button_1{
+padding:7px 10px 5px 10px!important; 
+ }
+.blog_1dt4il .form-control{
+height:60px; 
+ }
+.blog_1dt4il .form_text{
+height:160px; 
+ }
+/*********************blog_end****************/
+
+
+@media screen and (max-width : 767px){
+.stream_2im2 {
+padding-top: 230px!important;
+}
+.blog_1l1i h6{
+text-align:center; 
+ }
+.pages {
+text-align:center;  
+ }
+.pages ul li{
+margin-bottom:5px; 
+ }
+.blog_1r{
+margin-top:20px; 
+ }
+.blog_1r1  h4{
+text-align:center;
+ }
+.blog_1r1  .button_2{
+display:block;
+width:60%;
+margin-left:auto;
+margin-right:auto;
+ }
+.blog_1dt1i img{
+float:none!important;
+width:100%;
+margin-right:0!important;
+margin-bottom:15px; 
+ }
+.blog_1dt1i1 {
+text-align:left!important; 
+ }
+.blog_1dt2 {
+text-align:center; 
+ }
+.blog_1dt3il{
+margin-bottom:15px;
+text-align:center; 
+ }
+.blog_1dt3il img{
+width:auto!important;
+ }
+.blog_1dt4il .form-control{
+margin-bottom:15px; 
+ }
+.blog_1dt4il h6{
+text-align:center; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+.blog_1dt3il img{
+width:100%!important;
+ }
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.stream_2im2{
+padding-top:250px!important;
+ }
+.blog_1r ul li{
+font-size:14px;
+ }
+.blog_1dt1i img{
+width:200px;
+height:200px;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.blog_1dt1i img{
+width:200px;
+height:200px;
+ }
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+

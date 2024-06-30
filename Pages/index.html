@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Play Show</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="/css/font-awesome.min.css" rel="stylesheet" >
+	<link href="/css/global.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+	<script src="/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<div class="main clearfix position-relative">
+ <div class="main_1 clearfix position-absolute top-0 w-100">
+   <section id="header">
+<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+  <div class="container-xl">
+    <a class="navbar-brand fs-2 p-0 fw-bold text-white m-0 me-5" href="index.html"><i class="fa fa-youtube-play me-1 col_red"></i> Play Show </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	   <ul class="navbar-nav mb-0">
+	    
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+		 
+		<li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
+		
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blog
+          </a>
+          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="blog.html"> Blog</a></li>
+            <li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pages
+          </a>
+          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="account.html"> My Account</a></li>
+            <li><a class="dropdown-item border-0" href="contact.html"> Contact</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+          <a class="nav-link" href="team.html">Team</a>
+        </li>
+				
+		<li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+		
+      </ul>
+      <ul class="navbar-nav mb-0 ms-auto">
+	      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle dropdown_search" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-search"></i>
+          </a>
+          <ul class="dropdown-menu drop_1 drop_o p-3" aria-labelledby="navbarDropdown" data-bs-popper="none">
+            <li>
+			  <div class="input-group p-2">
+				<input type="text" class="form-control border-0" placeholder="Search Here">
+				<span class="input-group-btn">
+					<button class="btn btn-primary bg-transparent border-0 fs-5" type="button">
+						<i class="fa fa-search col_red"></i> </button>
+				</span>
+		</div>
+			</li>
+          </ul>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle dropdown_search" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            <i class="fa fa-bell-o"></i>
+          </a>
+          <ul class="dropdown-menu drop_1 drop_o drop_o1 p-0" aria-labelledby="navbarDropdown" data-bs-popper="none">
+            <li class="bg_red text-white p-3 fw-bold">
+			    Notification <span class="bg-white col_red span_1  rounded-circle d-inline-block me-1">3</span>
+			</li>
+			<li class="p-3 pb-0">
+			<div class="row">
+			  <div class="col-md-2 pe-0 col-2"><i class="fa fa-circle col_red font_8"></i></div>
+			  <div class="col-md-10 ps-0 col-10">
+            <a class="fw-normal text-capitalize" href="#">Semper</a> download 2000+ Simple Line Icons and Explore<br>
+            <span class="text-muted font_14">2 Days</span>
+			  </div>
+			</div>
+			</li><hr>
+			<li class="p-3 pt-0"><div class="row">
+			  <div class="col-md-2 pe-0 col-2"><i class="fa fa-circle col_red font_8"></i></div>
+			  <div class="col-md-10 ps-0 col-10">
+          Added new movie <a class="fw-normal text-capitalize" href="#">Porta</a> Cheatsheet to Start Using With Your Projects.<br>
+		   <span class="text-muted font_14">3 Days</span>
+			  </div>
+			</div></li>
+          </ul>
+        </li>
+		  <li class="nav-item">
+          <a class="nav-link" href="account.html"><i class="fa fa-user fs-4 align-middle me-1 lh-1 col_red"></i> Account </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</section>
+
+ </div>
+ <div class="main_2 clearfix">
+   <section id="center" class="center_home">
+ <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class="" aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/Mymovie/img/1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+         <h5 class="text-white-50 release ps-2 fs-6">NEW RELEASES</h5>
+        <h1 class="font_80 mt-4">The Rise Of <br> The Show</h1>
+		<h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">6.1</span> <span class="col_green">IMDB SCORE</span> <span class="mx-3">2022</span> <span class="col_red">Romance, Action</span></h6>
+		 <p class="mt-4">Certain but she but shyness why cottage. Guy the put instrument sir entreaties affronting.</p>
+		<h5 class="mb-0 mt-4 text-uppercase"><a class="button" href="#"><i class="fa fa-youtube-play me-1"></i> Watch Trailer</a></h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+         <h5 class="text-white-50 release ps-2 fs-6">NEW RELEASES</h5>
+        <h1 class="font_80 mt-4">Detail Of Popular<br>  New Show</h1>
+		<h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">7.3</span> <span class="col_green">IMDB SCORE</span> <span class="mx-3">2022</span> <span class="col_red">Romance, Action</span></h6>
+		 <p class="mt-4">Certain but she but shyness why cottage. Guy the put instrument sir entreaties affronting.</p>
+		<h5 class="mb-0 mt-4 text-uppercase"><a class="button" href="#"><i class="fa fa-youtube-play me-1"></i> Play Movie</a></h5>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+         <h5 class="text-white-50 release ps-2 fs-6">NEW RELEASES</h5>
+        <h1 class="font_80 mt-4">Lorem Ipsum <br> Sit Dolor</h1>
+		<h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">8.2</span> <span class="col_green">IMDB SCORE</span> <span class="mx-3">2022</span> <span class="col_red">Romance, Action</span></h6>
+		 <p class="mt-4">Certain but she but shyness why cottage. Guy the put instrument sir entreaties affronting.</p>
+		<h5 class="mb-0 mt-4 text-uppercase"><a class="button" href="#"><i class="fa fa-youtube-play me-1"></i> Watch Trailer</a></h5>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+ </div>
+ 
+</div>
+
+<section id="stream" class="p_3">
+<div class="container-xl">
+ <div class="row stream_1">
+  <div class="col-md-12">
+   <h6 class="col_red">ONLINE STREAMING</h6>
+   <h1 class="mb-0">Watch Shows Online</h1>
+  </div>
+ </div>
+ <div class="row stream_2 mt-4">
+  <div class="col-md-3 pe-0">
+    <div class="stream_2im clearfix position-relative">
+	  <div class="stream_2im1 clearfix">
+	    <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/4.jpg" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+	  </div>
+	  <div class="stream_2im2 position-absolute w-100 h-100 p-3 top-0  clearfix">
+	   <h6 class="font_14 col_red">ROMANCE, DRAMA</h6>
+	   <h4 class="text-white">Thinking You</h4>
+	   <h6 class="font_14 mb-0 text-white"><a class="text-white me-1 font_60 align-middle lh-1" href="#"><i class="fa fa-play-circle"></i></a> SEASON 1 - 2020</h6>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-3 pe-0">
+    <div class="stream_2im clearfix position-relative">
+	  <div class="stream_2im1 clearfix">
+	    <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/5.jpg" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+	  </div>
+	  <div class="stream_2im2 position-absolute w-100 h-100 p-3 top-0  clearfix">
+	   <h6 class="font_14 col_red">ROMANCE, DRAMA</h6>
+	   <h4 class="text-white">Civil War</h4>
+	   <h6 class="font_14 mb-0 text-white"><a class="text-white me-1 font_60 align-middle lh-1" href="#"><i class="fa fa-play-circle"></i></a> SEASON 1 - 2020</h6>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-3 pe-0">
+    <div class="stream_2im clearfix position-relative">
+	  <div class="stream_2im1 clearfix">
+	    <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/6.jpg" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+	  </div>
+	  <div class="stream_2im2 position-absolute w-100 h-100 p-3 top-0  clearfix">
+	   <h6 class="font_14 col_red">ROMANCE, DRAMA</h6>
+	   <h4 class="text-white">Popular Movie</h4>
+	   <h6 class="font_14 mb-0 text-white"><a class="text-white me-1 font_60 align-middle lh-1" href="#"><i class="fa fa-play-circle"></i></a> SEASON 1 - 2020</h6>
+	  </div>
+	</div>
+  </div>
+  <div class="col-md-3 pe-0">
+    <div class="stream_2im clearfix position-relative">
+	  <div class="stream_2im1 clearfix">
+	    <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/7.jpg" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+	  </div>
+	  <div class="stream_2im2 position-absolute w-100 h-100 p-3 top-0  clearfix">
+	   <h6 class="font_14 col_red">ROMANCE, DRAMA</h6>
+	   <h4 class="text-white">Best Game</h4>
+	   <h6 class="font_14 mb-0 text-white"><a class="text-white me-1 font_60 align-middle lh-1" href="#"><i class="fa fa-play-circle"></i></a> SEASON 1 - 2020</h6>
+	  </div>
+	</div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="exep" class="p_3 bg-light">
+<div class="container-xl">
+  <div class="row exep1">
+   <div class="col-md-6">
+    <div class="exep1l">
+	  <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/8.jpg" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+	</div>
+   </div>
+   <div class="col-md-6">
+    <div class="exep1r">
+	 <h1 class="mb-0">Best pick for hassle-free streaming experience.</h1>
+	 <div class="exep1ri row mt-4">
+	  <div class="col-md-2">
+	   <div class="exep1ril">
+	    <span class="font_60"><i class="fa fa-suitcase lh-1 col_red"></i></span>
+	   </div>
+	  </div>
+	  <div class="col-md-10">
+	   <div class="exep1rir">
+	     <h5 class="fs-4">Access while traveling</h5>
+		 <p class="mb-0">Keep access to your entertainment content while roaming the world.Pick from thousands.</p>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="exep1ri row mt-4">
+	  <div class="col-md-2">
+	   <div class="exep1ril">
+	    <span class="font_60"><i class="fa fa-desktop lh-1 col_red"></i></span>
+	   </div>
+	  </div>
+	  <div class="col-md-10">
+	   <div class="exep1rir">
+	     <h5 class="fs-4">Stream with no interruptions</h5>
+		 <p class="mb-0">Keep access to your entertainment content while roaming the world.Pick from thousands.</p>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="exep1ri row mt-4">
+	  <div class="col-md-2">
+	   <div class="exep1ril">
+	    <span class="font_60"><i class="fa fa-lock lh-1 col_red"></i></span>
+	   </div>
+	  </div>
+	  <div class="col-md-10">
+	   <div class="exep1rir">
+	     <h5 class="fs-4">Stay secure at all times</h5>
+		 <p class="mb-0">Keep access to your entertainment content while roaming the world.Pick from thousands.</p>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+</div>
+</section>
+
+<section id="spec" class="p_3 bg_dark">
+<div class="container-xl">
+  <div class="row stream_1 text-center">
+  <div class="col-md-12">
+   <h6 class="text-white-50">FIND ANYWHERE ELSE</h6>
+   <h1 class="mb-0 text-white font_50">Shows For You</h1>
+  </div>
+ </div>
+  <div class="row spec_1 mt-4">
+    <div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/10.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">5.9</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Ce Of Entro</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/9.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">6.1</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">White Panther</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/11.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">7.1</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">160 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Coming Soon</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/12.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">8.1</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Handmaiden</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/13.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">6.9</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">The Silence</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/14.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">8.4</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Monospaced</a></h5>
+	 </div>
+	</div>
+  </div>
+  <div class="row spec_1 mt-4">
+    <div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/15.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">5.9</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Ce Of Entro</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/16.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">6.1</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">White Panther</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/17.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">7.1</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">160 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Coming Soon</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/18.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">8.1</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Handmaiden</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/19.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">6.9</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">The Silence</a></h5>
+	 </div>
+	</div>
+	<div class="col-lg-2 pe-0 col-md-4">
+	 <div class="spec_1im clearfix position-relative">
+	   <div class="spec_1imi clearfix">
+	     <img src="img/20.jpg" class="w-100" alt="abc">
+	   </div>
+	    <div class="spec_1imi1 row  m-0 w-100 h-100 clearfix position-absolute bg_col top-0">
+	      <div class="col-md-9 col-9 p-0">
+		   <div class="spec_1imi1l pt-2">
+		     <h6 class="mb-0 font_14 d-inline-block"><a class="bg-black d-block text-white"  href="#"> <span class="pe-2 ps-2">1080</span>  <span class="bg-white  d-inline-block text-black span_2"> HD</span></a></h6>
+		   </div>
+		  </div>
+		  <div class="col-md-3 col-3 p-0">
+		   <div class="spec_1imi1r">
+		     <h6 class="text-white"><span class="rating d-inline-block rounded-circle me-2 col_green">8.4</span></h6>
+		   </div>
+		  </div>
+	   </div>
+	 </div>
+	 <div class="spec_1im1 clearfix">
+	  <h6 class="text-light fw-normal font_14 mt-3">180 min,
+<span class="col_red">Action</span>
+<span class="span_1 pull-right d-inline-block">PG13</span></h6>
+    <h5 class="mb-0 fs-6"><a class="text-white" href="#">Monospaced</a></h5>
+	 </div>
+	</div>
+  </div>
+  <div class="row spec_1 text-center mt-5">
+  <div class="col-md-12">
+   <h5 class="mb-0 text-uppercase"><a class="button" href="#"><i class="fa fa-youtube-play me-1"></i> BROWSE ALL MOVIES</a></h5>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="testim" class="p_3 pb-5">
+	<div class="container-xl">
+		<div class="row stream_1 text-center">
+  <div class="col-md-12">
+   <h6 class="text-uppercase col_red">Testimonials</h6>
+   <h1 class="mb-0 font_50">Trusted by tech experts and <br>  real users</h1>
+  </div>
+ </div>
+		<div class="row testim_1 mt-4">
+		  <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="testim_1i row">
+	     <div class="col-md-6">
+		  <div class="testim_1i1 text-center p-4 pt-5 pb-5 bg_dark rounded">
+		    <img src="img/22.jpg" alt="abc" class="rounded-circle">
+			<h4 class="col_red mt-3">Semp Porta</h4>
+			<h6 class="fw-normal text-muted">CEO, Company Inc.</h6>
+			<span class="font_60 text-white"><i class="fa fa-quote-left"></i></span>
+			<p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aperiam porro necessitatibus, consequuntur, reiciendis
+dolore doloribus id repellendus tempora vitae quia voluptas ipsum eligendi hic.</p>
+             <span class="col_red">
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star-half-o"></i>
+			 </span>
+		  </div>
+		 </div>
+		 <div class="col-md-6">
+		  <div class="testim_1i1 text-center p-4 pt-5 pb-5 bg_dark rounded">
+		    <img src="img/23.jpg" alt="abc" class="rounded-circle">
+			<h4 class="col_red mt-3">Eget Nulla</h4>
+			<h6 class="fw-normal text-muted">CEO, Company Inc.</h6>
+			<span class="font_60 text-white"><i class="fa fa-quote-left"></i></span>
+			<p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aperiam porro necessitatibus, consequuntur, reiciendis
+dolore doloribus id repellendus tempora vitae quia voluptas ipsum eligendi hic.</p>
+             <span class="col_red">
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star-half-o"></i>
+			 </span>
+		  </div>
+		 </div>
+	  </div>
+    </div>
+    <div class="carousel-item">
+       <div class="testim_1i row">
+	     <div class="col-md-6">
+		  <div class="testim_1i1 text-center p-4 pt-5 pb-5 bg_dark rounded">
+		    <img src="img/24.jpg" alt="abc" class="rounded-circle">
+			<h4 class="col_red mt-3">Dapibus Diam</h4>
+			<h6 class="fw-normal text-muted">CEO, Company Inc.</h6>
+			<span class="font_60 text-white"><i class="fa fa-quote-left"></i></span>
+			<p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aperiam porro necessitatibus, consequuntur, reiciendis
+dolore doloribus id repellendus tempora vitae quia voluptas ipsum eligendi hic.</p>
+             <span class="col_red">
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star-half-o"></i>
+			 </span>
+		  </div>
+		 </div>
+		 <div class="col-md-6">
+		  <div class="testim_1i1 text-center p-4 pt-5 pb-5 bg_dark rounded">
+		    <img src="img/21.jpg" alt="abc" class="rounded-circle">
+			<h4 class="col_red mt-3">Per Conubia</h4>
+			<h6 class="fw-normal text-muted">CEO, Company Inc.</h6>
+			<span class="font_60 text-white"><i class="fa fa-quote-left"></i></span>
+			<p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos aperiam porro necessitatibus, consequuntur, reiciendis
+dolore doloribus id repellendus tempora vitae quia voluptas ipsum eligendi hic.</p>
+             <span class="col_red">
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star"></i>
+			  <i class="fa fa-star-half-o"></i>
+			 </span>
+		  </div>
+		 </div>
+	  </div>
+    </div>
+  </div>
+</div>
+		</div>
+	</div>
+</section>
+
+<section id="price">
+ <div class="price_m clearfix pt-5 pb-5 bg_image">
+  <div class="container-xl">
+	<div class="row stream_1 text-center">
+	<div class="col-md-12">
+	<h6 class="text-uppercase col_red">START SECURE BROWSING</h6>
+	<h1 class="mb-0 font_50 text-white">Ready to Grab the deal?</h1>
+	</div>
+	</div>
+	<div class="row price_1 mt-4">
+	<div class="col-md-4">
+	 <div class="price_1i bg-white p-4 text-center">
+	  <span class="font_60 col_red lh-1"><i class="fa fa-youtube-play"></i></span>
+	  <h5>1-month plan</h5>
+	  <h1 class="font_50 lh-1 mt-3">$8.99</h1>
+	  <h6 class="fw-normal">Per month</h6>
+	  <h6 class="text-uppercase mt-3"><a class="button_1 d-block" href="#"> Get The Deal</a></h6>
+	  <p class="mb-0 mt-3"><i class="fa fa-lock me-1 col_green"></i> 45-days money-back guarantee</p>
+	 </div>
+	</div>
+	<div class="col-md-4">
+	 <div class="price_1i bg-white p-4 text-center">
+	  <span class="font_60 col_red lh-1"><i class="fa fa-youtube-play"></i></span>
+	  <h5>12-month plan</h5>
+	  <h1 class="font_50 lh-1 mt-3">$4.99</h1>
+	  <h6 class="fw-normal">Per month</h6>
+	  <h5 class="save d-inline-block col_red fs-6 mt-2">Save 63%</h5>
+	  <p class="mt-2 fs-6"><span class="text-decoration-line-through text-muted">$236.80</span> <span class="fw-bold">$83.00</span> for the first 2 years</p>
+	  <h6 class="text-uppercase mt-3"><a class="button_1 d-block" href="#"> Get The Deal</a></h6>
+	  <p class="mb-0 mt-3"><i class="fa fa-lock me-1 col_green"></i> 45-days money-back guarantee</p>
+	 </div>
+	</div>
+	<div class="col-md-4">
+	 <div class="price_1i bg-white p-4 text-center">
+	  <span class="font_60 col_red lh-1"><i class="fa fa-youtube-play"></i></span>
+	  <h5>6-month plan</h5>
+	  <h1 class="font_50 lh-1 mt-3">$6.99</h1>
+	  <h6 class="fw-normal">per month</h6>
+	  <h6 class="text-uppercase mt-3"><a class="button_1 d-block" href="#"> Get The Deal</a></h6>
+	  <p class="mb-0 mt-3"><i class="fa fa-lock me-1 col_green"></i> 45-days money-back guarantee</p>
+	 </div>
+	</div>
+	</div>
+	</div>
+ </div>
+</section>
+
+<section id="contact_h" class="p_3 bg-light">
+	<div class="container-xl">
+	 <div class="row contact_h_1">
+		<div class="col-md-6">
+		  <div class="contact_h_1l">
+		    <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/25.jpg" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+		  </div>
+		</div>
+		<div class="col-md-6">
+		  <div class="contact_h_1r bg-white">
+		   <h3>Feel Free to Contact Us</h3>
+		   <p class="mb-3">Distinctively exploit optimal alignments for intuitive coordinate business applications technologies</p>
+		   <input class="form-control mt-3" placeholder="Name" type="text">
+		   <input class="form-control mt-3" placeholder="Phone" type="text">
+		   <input class="form-control mt-3" placeholder="Email" type="text">
+			<select name="categories" class="form-select mt-3" required="">
+			<option value="">Choose Service Type</option>
+			<option>Computer</option>
+			<option>Business</option>
+			<option>Chemistry</option>
+			<option>Physics</option>
+			<option>Photoshop</option>
+			<option>Management</option>
+			</select>
+			<h6 class="mb-0 mt-4"><a class="button_1 d-block text-center" href="#">REQUEST FOR SUBMIT</a></h6>
+		  </div>
+		</div>
+	 </div>
+	</div>
+</section>
+
+<section id="footer" class="p_3 bg_dark">
+	<div class="container-xl">
+	<div class="row footer_1 text-center">
+	<div class="col-md-12">
+	 <h1 class="text-white">Start for your first 30 days.</h1>
+	 <p class="text-light">Ready to watch? Enter your email to create or restart your membership.</p>
+	 <div class="input-group w-50 m-auto">
+				<input type="text" class="form-control rounded-0 fs-6" placeholder="Type your e-mail address">
+				<span class="input-group-btn">
+					<button class="btn btn-primary bg_red rounded-0 bg_red fw-bold" type="button">
+						GET STARTED </button>
+				</span>
+		</div>
+	</div>
+	</div>
+	<div class="row footer_2 mt-4 pt-4">
+	<div class="col-md-4">
+	 <div class="footer_2i">
+	  <h5 class="text-white">Questions? Call 0850-380-6444</h5>
+	  <p class="text-muted mt-3">Format for custom post types that are not book or you can use else if to specify a second post type the same way as above.</p>
+	  <select name="categories" class="form-select mt-4 bg-transparent w-50 rounded-0 fw-bold" required="">
+			<option value="">English</option>
+			<option>French</option>
+			<option>Hindi</option>
+			<option>American</option>
+			<option>German</option>
+			</select>
+	 </div>
+	</div>
+	<div class="col-md-2">
+	 <div class="footer_2i">
+      <h5 class="text-uppercase col_red mb-3">Play Show</h5>
+	  <ul class="mb-0 row">
+	   <li class="col-md-12 col-6 p-0"><a class="text-muted" href="#">Play Show</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Devices</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Tips</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Contact</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Legal Notices</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Our Terms</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-md-2">
+	 <div class="footer_2i">
+      <h5 class="text-uppercase col_red mb-3">SUPPORT</h5>
+	  <ul class="mb-0 row">
+	  <li class="col-md-12 col-6 p-0"><a class="text-muted" href="#">Help Center</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">FAQ</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Account</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Privacy Policy</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Media Center</a></li>
+	   <li class="mt-2 col-md-12 col-6 p-0"><a class="text-muted" href="#">Support</a></li>
+	  </ul>
+	 </div>
+	</div>
+	<div class="col-md-4">
+	 <div class="footer_2i">
+	  <h5 class="text-uppercase col_red mb-3">Newsletter</h5>
+	  <p class="text-muted mt-3">Format for custom post types that are not book or you can use else if to specify a second post type the same way as above.</p>
+	  <input class="form-control mt-3 bg-transparent rounded-0" placeholder="Enter Your Email" type="text">
+	  <h6 class="mb-0 text-uppercase mt-4"><a class="button" href="#"><i class="fa fa-location-arrow me-1"></i> SUBMIT NOW</a></h6>
+	 </div>
+	</div>
+	</div>
+	</div>
+</section>
+
+<section id="footer_b">
+	<div class="container-xl">
+	<div class="row footer_b1 text-center">
+	<div class="col-md-12">
+	  <p class="mb-0 text-muted">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_red" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+	</div>
+	</div>
+	</div>
+</section>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar_sticky = document.getElementById("navbar_sticky");
+var sticky = navbar_sticky.offsetTop;
+var navbar_height = document.querySelector('.navbar').offsetHeight;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky + navbar_height) {
+    navbar_sticky.classList.add("sticky")
+	document.body.style.paddingTop = navbar_height + 'px';
+  } else {
+    navbar_sticky.classList.remove("sticky");
+	document.body.style.paddingTop = '0'
+  }
+}
+</script>
+
+</body>
+
+</html>

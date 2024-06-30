@@ -1,0 +1,100 @@
+/*
+Template Name: Play Show
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************about****************/
+.main_about{
+ background-image: url(../img/35.jpg);
+ background-position: center; 
+ }
+.spec_1i{
+box-shadow: 0 0 10px #e901011f;
+ }
+#team .events_1i1i1 ul{
+background:#e90101;
+border-radius:10px 10px 0px 0px;
+padding:10px 20px 8px 20px; 
+ }
+#team .events_1i1i1{
+display:none; 
+ }
+#team .events_1i1:hover .events_1i1i1{
+display:block; 
+ }
+.main_team{
+ background-image: url(../img/37.jpg);
+ background-position: center; 
+ }
+/*********************about_end****************/
+
+
+@media screen and (max-width : 767px){
+.feature_1l {
+text-align:center;
+margin-bottom:15px; 
+ }
+.feature_1l  p{
+text-align:left; 
+ }
+.serve_1  br{
+display:none; 
+ }
+.serve_1  p{
+text-align:left; 
+ }
+.spec_1i {
+margin-bottom:15px; 
+ }
+.proj_i {
+text-align:center;
+margin-top:10px; 
+margin-bottom:10px; 
+ }
+.events_1i2 {
+margin-bottom:15px; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.feature_1r img{
+min-height:650px; 
+ }
+#spec  .button_1{
+ padding:23px 20px 20px 20px!important;
+ font-size:14px;
+ }
+#spec  .button_2{
+ padding:23px 20px 20px 20px!important;
+ font-size:14px;
+ }
+.proj_il .fs-3{
+font-size:16px!important; 
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.feature_1r img{
+min-height:650px; 
+ }
+#spec  .button_1{
+ padding:23px 20px 20px 20px!important;
+ font-size:14px;
+ }
+#spec  .button_2{
+ padding:23px 20px 20px 20px!important;
+ font-size:14px;
+ }
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+

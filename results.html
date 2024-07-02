@@ -1,0 +1,120 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="grid.css">
+     <link rel="stylesheet" href="app.css">
+    <title>Search Results</title>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">Cinemantic
+                    <i class='bx bx-movie-play bx-tada main-color'></i>Cine<span class="main-color">man</span>tic
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                       <li>	  <span  >
+                        <input style=" width: 85%;padding:1%"  type="text"  placeholder="Search Here" id="searchInput">
+                        <span  class="input-group-btn">
+                            <button   type="button"  onclick="handleSearch()">
+                                🔍   </button>
+                        </span>
+                    </span></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">catalog</a></li>
+                    <li><a href="#">Movies</a></li>
+                  
+                 
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#" class="btn btn-hover">
+                            <span>Sign in</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END NAV -->
+
+     
+    <div id="resultsContainer">
+        <!-- Results will be dynamically added here -->
+    </div>
+
+    <script>
+        // Function to create a card element for each search result
+        function createCardElement(data) {
+            const card = document.createElement('div');
+            card.className = 'card';
+          
+            // Poster with image
+            const poster = document.createElement('div');
+            poster.className = 'poster';
+            poster.innerHTML = `<img src="${data.img}" alt="${data.title}">`;
+            card.appendChild(poster);
+          
+            // Details section
+            const details = document.createElement('div');
+            details.className = 'details';
+            details.innerHTML = `
+                <h2>${data.title} <br><span>${data.personname}</span></h2>
+                <div class="tags">
+                    <a href="${data.detailslink}" class="buttonDetails">MORE DETAILS</a>
+                </div>
+                <div class="info">
+                    <p>${data.story}</p>
+                </div>
+            `;
+            card.appendChild(details);
+          
+            return card;
+        }
+
+        // Function to display search results
+        function displaySearchResults() {
+            var searchQuery = getUrlParameter('search');
+            var resultsJSON = getUrlParameter('results');
+        
+            if (searchQuery && resultsJSON) {
+                var results = JSON.parse(resultsJSON);
+                var resultsContainer = document.getElementById('resultsContainer');
+        
+                // Clear previous results if any
+                resultsContainer.innerHTML = '';
+        
+                // Display results as cards
+                results.forEach(function(result) {
+                    var card = createCardElement(result);
+                    resultsContainer.appendChild(card);
+                });
+            } else {
+                var resultsContainer = document.getElementById('resultsContainer');
+                resultsContainer.innerHTML = 'No results found.';
+            }
+        }
+        
+        // Function to extract URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        
+        // Call the function to display search results when the page loads
+        window.onload = function() {
+            displaySearchResults();
+        };
+    </script>
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+       <script src="app.js"></script>
+</body>
+</html>

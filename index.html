@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="./images/movie logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Cinemagic
+    </title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <!-- BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="style.css">
+ <script src="search.js"></script>
+</head>
+
+<body>
+
+<script>
+         const userDataTOs = sessionStorage.getItem("user");
+      if (userDataTOs) {
+        const userData = JSON.parse(userDataTOs);
+        console.log(userData.username);
+        console.log(userData.email);
+       console.log( userData.age);
+
+      } else {
+        document.body.innerHTML = "<h2>No user data found. Please sign up.</h2>";
+      }
+
+     </script>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+   <script src="js.js"></script>
+   <div class="nav-wrapper">
+    <div class="container">
+        <div class="nav">
+            <a href="#" class="logo">
+                <i class='bx bx-movie-play bx-tada  ' style="color:white"></i>Cine<span class="main-color">mantic</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">catalog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="indexLOGIN.html" class="btn btn-hover">
+                        <span>Sign in</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- MOBILE MENU TOGGLE -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END NAV -->
+
+<!-- HERO SECTION -->
+<div class="hero-section">
+    <!-- HERO SLIDE -->
+    <div class="hero-slide">
+        <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+            <!-- SLIDE ITEM -->
+            <div class="hero-slide-item">
+                <img src="/homepage/images/queen-cleopatra-featured.avif" alt="">
+                <div class="overlay"></div>
+                <div class="hero-slide-item-content">
+                    <div class="item-content-wraper">
+                        <div class="item-content-title top-down">
+                            Queen Cleopatra 
+                        </div>
+                        <div class="movie-infos top-down delay-2">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="item-content-description top-down delay-4">
+                            As Egypt's last pharaoh, Cleopatra fights to protect her throne, family and legacy in this docudrama featuring reenactments and expert interviews.
+                        </div>
+                        <div class="item-action top-down delay-6">
+                            <a href="#" class="btn btn-hover">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span  ><a href="#watch">Watch now</a></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SLIDE ITEM -->
+            <!-- SLIDE ITEM -->
+            <div class="hero-slide-item">
+                <img src="/homepage/images/th.jfif" alt="">
+                <div class="overlay"></div>
+                <div class="hero-slide-item-content">
+                    <div class="item-content-wraper">
+                        <div class="item-content-title top-down">
+                            Cristiano Ronaldo
+                        </div>
+                        <div class="movie-infos top-down delay-2">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="item-content-description top-down delay-4">
+                            A portrait of famed Portuguese soccer hero Cristiano Ronaldo charts his career and personal life,
+                            offering a glimpse of how he handles stardom.
+                        </div>
+                        <div class="item-action top-down delay-6">
+                            <a href="#" class="btn btn-hover">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END SLIDE ITEM -->
+            <!-- SLIDE ITEM -->
+            <div class="hero-slide-item">
+                <img src="/homepage/images/money2.jpg" alt="">
+                <div class="overlay"></div>
+                <div class="hero-slide-item-content">
+                    <div class="item-content-wraper">
+                        <div class="item-content-title top-down">
+                            Dirty Money
+                        </div>
+                        <div class="movie-infos top-down delay-2">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120 mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="item-content-description top-down delay-4">
+                            The Smartest Guys in the Room, Zero Days, and Going Clear Scientology & the Prison of Belief
+                        </div>
+                        <div class="item-action top-down delay-6">
+                            <a href="#" class="btn btn-hover">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div></div></div></div>
+            <!-- END SLIDE ITEM -->
+
+        <!-- END HERO SLIDE -->
+        <!-- TOP MOVIES SLIDE -->
+         <div id="watch"></div>
+    <center> <div id="stream"    style="background-color: #000;"  ></div></center>
+
+
+
+
+    
+    
+    <!-- <div class="copyright">
+        Copyright 2023  
+    </div> 
+     -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

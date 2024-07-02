@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success Stories</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=PT+Sans");
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'PT Sans', sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .success-story-card {
+      width: 300px;
+      height: 450px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      margin: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .success-story-card:hover .story-details {
+      transform: translateY(0);
+    }
+    .success-story-card .story-poster {
+      height: 60%;
+      overflow: hidden;
+      position: relative;
+    }
+    .success-story-card .story-poster img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .success-story-card .story-details {
+      padding: 15px;
+      transition: transform 0.3s ease;
+      transform: translateY(100%);
+      background-color: #222;
+      color: #fff;
+      height: 40%;
+      box-sizing: border-box;
+      overflow-y: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    .story-details h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+    .story-details span {
+      display: block;
+      font-size: 0.875rem;
+      color: #ff9800;
+      margin-top: 5px;
+    }
+    .rating {
+      position: relative;
+      padding: 5px 0;
+      color: #f7f406;
+      margin-top: 10px;
+    }
+    .rating i.fa {
+      margin-right: 2px;
+      font-size: 0.875rem;
+    }
+    .tags {
+      margin-top: 5px;
+    }
+    .tags span {
+      padding: 2px 5px;
+      margin-top: 2px;
+      display: inline-block;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 0.75rem;
+    }
+    .tags span.action {
+      background: #7206f7;
+    }
+    .tags span.darma {
+      background: #f70661;
+    }
+    .info {
+      color: #fff;
+    }
+    .info p {
+      margin: 15px 0 10px;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+
+<div id="success-stories" class="cards-container"></div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script>
+  const firebaseConfig = {
+   apiKey: "AIzaSyDBeUCN3U9H9QG-n9DyxUNGo5fgyHt-cWg",
+      authDomain: "group5project-6cff7.firebaseapp.com",
+      projectId: "group5project-6cff7",
+      storageBucket: "group5project-6cff7.appspot.com",
+      messagingSenderId: "862809726744",
+      appId: "1:862809726744:web:0a9a79700618c748a9c86d",
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  // Reference to the database
+  var database = firebase.database();
+
+  // Function to fetch and display success stories
+  function displaySuccessStories() {
+    var storiesRef = firebase.database().ref("successStories");
+    storiesRef.once('value', function(snapshot) {
+      snapshot.forEach(function(childSnapshot) {
+        var storyData = childSnapshot.val();
+
+        // Check if tags property exists and is an array
+        if (storyData.tags && Array.isArray(storyData.tags)) {
+          // Create HTML elements for each story
+          var storyContainer = document.createElement('div');
+          storyContainer.classList.add('success-story-card');
+
+          var posterElement = document.createElement('div');
+          posterElement.classList.add('story-poster');
+
+          var posterImgElement = document.createElement('img');
+          posterImgElement.src = storyData.img;
+          posterImgElement.alt = storyData.title;
+
+          var detailsElement = document.createElement('div');
+          detailsElement.classList.add('story-details');
+
+          var titleElement = document.createElement('h2');
+          titleElement.textContent = storyData.title;
+
+          var personElement = document.createElement('span');
+          personElement.textContent = storyData.personname;
+
+          var ratingElement = document.createElement('div');
+          ratingElement.classList.add('rating');
+          var ratingStars = '';
+          for (var i = 0; i < 5; i++) {
+            if (i < storyData.rating) {
+              ratingStars += '<i class="fas fa-star"></i>';
+            } else {
+              ratingStars += '<i class="far fa-star"></i>';
+            }
+          }
+          ratingElement.innerHTML = ratingStars + '<span>' + storyData.rating + '/5</span>';
+
+          var tagsElement = document.createElement('div');
+          tagsElement.classList.add('tags');
+          var tags = '';
+          storyData.tags.forEach(function(tag) {
+            tags += '<span class="' + tag.toLowerCase() + '">' + tag + '</span>';
+          });
+          tagsElement.innerHTML = tags;
+
+          var infoElement = document.createElement('div');
+          infoElement.classList.add('info');
+          var infoParagraph = document.createElement('p');
+          infoParagraph.textContent = storyData.description;
+          infoElement.appendChild(infoParagraph);
+
+          // Append elements to story container
+          posterElement.appendChild(posterImgElement);
+          storyContainer.appendChild(posterElement);
+
+          titleElement.appendChild(personElement);
+          detailsElement.appendChild(titleElement);
+          detailsElement.appendChild(ratingElement);
+          detailsElement.appendChild(tagsElement);
+          detailsElement.appendChild(infoElement);
+          storyContainer.appendChild(detailsElement);
+
+          // Append story container to the main container in HTML
+          document.getElementById('success-stories').appendChild(storyContainer);
+        } else {
+          console.error('Tags property is missing or not an array for story:', storyData);
+        }
+      });
+    });
+  }
+
+  // Call the function to display stories when the page loads
+  displaySuccessStories();
+</script>
+
+</body>
+</html>

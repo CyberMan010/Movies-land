@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <script src="CardDetails.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Details page </title>
+   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+   <link rel="stylesheet" href="grid.css">
+   <link rel="stylesheet" href="app.css">
+   <link rel="stylesheet" href="style.css">  <link rel="stylesheet" href="cardDetails.css">
+<script src="search.js"></script>
+</head>
+<body>
+
+  <div class="nav-wrapper">
+    <div class="container">
+        <div class="nav">
+            <a href="#" class="logo"> 
+                <i class='bx bx-movie-play bx-tada  ' style="color:white"></i>Cine<span class="main-color">mantic</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                   <li>	  <span  >
+                    <input style=" width: 85%;padding:1%"  type="text"  placeholder="Search Here" id="searchInput">
+                    <span  class="input-group-btn">
+                        <button   type="button"  onclick="handleSearch()">
+                            🔍   </button>
+                    </span>
+                </span></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Genre</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Series</a></li>
+             
+                <li><a href="#">About</a></li>
+                <li>
+                    <a href="login.html" class="btn btn-hover">
+                        <span>Sign in</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- MOBILE MENU TOGGLE -->
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </div>
+</div>   
+<!-- END NAV -->
+  <div id="details"></div>
+  <div class="notification">
+    <div class="notiglow"></div>
+    <div class="notiborderglow"></div>
+    <div class="notititle">Movie Reviews</div>
+    <div class="notibody">Demonstrate your opinion by a comment!</div>
+  </div>
+<div class="containings">
+
+
+  <form id="commentForm">
+    <textarea id="commentText" placeholder="Write your comment here..." required></textarea>
+    <button type="submit" class="buton"><span class="Icontainer"><svg fill="white" viewBox="0 0 512 512" height="1em"><path d="M123.6 391.3c12.9-9.4 29.6-11.8 44.6-6.4c26.5 9.6 56.2 15.1 87.8 15.1c124.7 0 208-80.5 208-160s-83.3-160-208-160S48 160.5 48 240c0 32 12.4 62.8 35.7 89.2c8.6 9.7 12.8 22.5 11.8 35.5c-1.4 18.1-5.7 34.7-11.3 49.4c17-7.9 31.1-16.7 39.4-22.7zM21.2 431.9c1.8-2.7 3.5-5.4 5.1-8.1c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208s-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6c-15.1 6.6-32.3 12.6-50.1 16.1c-.8 .2-1.6 .3-2.4 .5c-4.4 .8-8.7 1.5-13.2 1.9c-.2 0-.5 .1-.7 .1c-5.1 .5-10.2 .8-15.3 .8c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4c4.1-4.2 7.8-8.7 11.3-13.5c1.7-2.3 3.3-4.6 4.8-6.9c.1-.2 .2-.3 .3-.5z"></path></svg></span><p class="texst">comment</p></button>
+  </form>
+  <div id="commentsSection"></div>
+  <div id=" commentForm"></div>
+</div>
+  
+  <script>
+    const userDataTOs = sessionStorage.getItem("user");
+    if (userDataTOs) {
+      const userData = JSON.parse(userDataTOs);
+      console.log(userData.username);
+      console.log(userData.email);
+      console.log(userData.age);
+    } else {
+      document.body.innerHTML = "<h2>No user data found. Please sign up.</h2>";
+    }
+    var varperson="";
+
+    function displayStoryDetails(data) {
+      const detailsDiv = document.getElementById('details');
+      detailsDiv.innerHTML = `
+ 
+        <div class="projcard projcard-blue">
+          <div class="projcard-innerbox">
+            <img class="projcard-img" src="${data.img}" alt="${data.title}">
+            <div class="projcard-textbox">
+              <div class="projcard-title">${data.title}</div>
+              <div class="projcard-subtitle">By: ${data.personname}</div>
+              <div class="projcard-bar"></div>
+              <div class="projcard-description">${data.story}</div>
+              <div class="projcard-tagbox">Category: Movies</div>
+            </div>
+          </div>
+        </div>
+        varperson= ${data.personname};
+      `;
+  varperson= data.personname ; console .log("welcome"+varperson);
+    
+    }
+      
+
+   
+    function fetchStoryDetails() {
+      const storyData = localStorage.getItem('storyData');
+      if (storyData) {
+        const data = JSON.parse(storyData);
+        displayStoryDetails(data);
+      } else {
+        document.getElementById('details').innerHTML = '<p>No story data found</p>';
+      }
+    }
+    console .log("welgggggggcome"+varperson);
+
+    fetchStoryDetails();
+  </script>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import {
+      getDatabase,
+      ref,
+      set,
+      push,
+      get,
+      update,
+      remove
+    } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC_YpfJibbkrYiKtfpodbhCdF1KyF2Lbd0",
+      authDomain: "movies-1eeb9.firebaseapp.com",
+      databaseURL: "https://movies-1eeb9-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "movies-1eeb9",
+      storageBucket: "movies-1eeb9.appspot.com",
+      messagingSenderId: "265328814791",
+      appId: "1:265328814791:web:7bbcf5af8448ffd5b66ce2",
+      measurementId: "G-RRKSY9TQNR"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    const commentForm = document.getElementById('commentForm');
+    const commentsSection = document.getElementById('commentsSection');
+
+    commentForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const commentText = document.getElementById('commentText').value;
+      const userDataTOs = sessionStorage.getItem("user");
+      if (userDataTOs) {
+        const userData = JSON.parse(userDataTOs);
+        const newCommentRef = push(ref(database, 'comments/'));
+        const commentData = {
+          commentId: newCommentRef.key,
+          email: userData.email,
+          personname: userData.username,
+          commentText: commentText
+        };
+
+        set(newCommentRef, commentData)
+          .then(() => {
+            alert('Comment added successfully');
+            document.getElementById('commentText').value = '';
+            fetchComments();
+          })
+          .catch((error) => {
+            console.error('Error adding comment:', error);
+            alert('Error adding comment:', error);
+          });
+      } else {
+        alert('No user data found. Please sign up.');
+      }
+    });
+
+    function fetchComments() {
+      const commentsRef = ref(database, 'comments/');
+      get(commentsRef)
+        .then((snapshot) => {
+          if (snapshot.exists()) {
+            const commentsData = snapshot.val();
+            displayComments(commentsData);
+          } else {
+            commentsSection.innerHTML = '<p>No comments found.</p>';
+          }
+        })
+        .catch((error) => {
+          console.error('Error fetching comments:', error);
+          commentsSection.innerHTML = '<p>Error fetching comments.</p>';
+        });
+    }
+
+    function displayComments(commentsData) {
+      commentsSection.innerHTML = '';
+      const userDataTOs = sessionStorage.getItem("user");
+      const currentUser = userDataTOs ? JSON.parse(userDataTOs) : null;
+      
+      for (const key in commentsData) {
+        if (commentsData.hasOwnProperty(key)) {
+          const comment = commentsData[key];
+          const commentDiv = document.createElement('div');
+          commentDiv.innerHTML = `
+            <p>${comment.commentText} - <strong>${comment.personname}</strong> (${comment.email})</p>
+          `;
+          if (currentUser && currentUser.email === comment.email) {
+            commentDiv.innerHTML += `
+              <button class="boton" onclick="deleteComment('${comment.commentId}')">Delete</button>
+              <button class="boton" onclick="updateComment('${comment.commentId}')">Update</button>
+              
+            `;
+          }
+          commentsSection.appendChild(commentDiv);
+        }
+      }
+    }
+
+    window.deleteComment = function(commentId) {
+      const commentRef = ref(database, 'comments/' + commentId);
+      remove(commentRef)
+        .then(() => {
+          alert('Comment deleted successfully');
+          fetchComments();
+        })
+        .catch((error) => {
+          console.error('Error deleting comment:', error);
+          alert('Error deleting comment:', error);
+        });
+    };
+
+    
+    window.updateComment = function(commentId) {
+      const newCommentText = prompt("update your comment");
+      if (newCommentText) {
+        const commentRef = ref(database, 'comments/' + commentId);
+        update(commentRef, { commentText: newCommentText })
+          .then(() => {
+            alert('Comment updated successfully');
+            fetchComments();
+          })
+          .catch((error) => {
+            console.error('Error updating comment:', error);
+            alert('Error updating comment:', error);
+          });
+      }
+    };
+
+     
+    fetchComments();
+  </script>
+</body>
+</html>

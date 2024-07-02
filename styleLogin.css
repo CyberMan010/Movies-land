@@ -1,0 +1,103 @@
+.inter-login {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+body {
+  background-color: rgba(32, 32, 32, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.login {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #62dbbe;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 15px;
+}
+
+/* Input field styles */
+input.email,
+input[type="password"] {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+input.email:focus,
+input[type="password"]:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+  width: 70%;
+  padding: 10px;
+  background-color: rgba(98, 219, 190, 1);
+  border: none;
+  border-radius: 3px;
+  color: aliceblue;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgba(98, 219, 190, 0.8);
+}
+
+.forgot-password {
+  display: flex;
+  padding-left: 35px;
+  color: rgba(98, 219, 190, 0.8);
+  font-size: 12px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #fff;
+}
+
+p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.signup {
+  color: rgba(98, 219, 190, 0.8);
+}

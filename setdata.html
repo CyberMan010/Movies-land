@@ -1,0 +1,175 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+
+     <script>
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC_YpfJibbkrYiKtfpodbhCdF1KyF2Lbd0",
+  authDomain: "movies-1eeb9.firebaseapp.com",
+  databaseURL: "https://movies-1eeb9-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "movies-1eeb9",
+  storageBucket: "movies-1eeb9.appspot.com",
+  messagingSenderId: "265328814791",
+  appId: "1:265328814791:web:7bbcf5af8448ffd5b66ce2",
+  measurementId: "G-RRKSY9TQNR"
+};
+firebase.initializeApp(firebaseConfig);
+
+
+    </script>
+
+
+
+
+
+<script>
+    // Reference to the database
+    var database = firebase.database();
+  
+    // Function to write a success story
+    function writeSuccessStory(personId, personname, title, story,catalog,img) {
+      firebase.database().ref('successStories/' +personId).set({
+        personname: personname,
+        title: title,
+        story: story,
+        catalog:catalog,
+        img:img ,
+      });
+    }
+  
+    // Example usage
+
+    // writeSuccessStory('1', 'Talal Abu-Ghazaleh', 'Talal Abu-Ghazaleh Story ', 'Talals impact in promoting intellectual property rights globally','Business, Intellectual Property','  https://en.ammonnews.net/img/big/20204281114RN841.jpeg?medium');
+    // writeSuccessStory('2', 'Rania Al-Abdullah', 'Rania Al-Abdullah Story ', 'Queen Ranias humanitarian efforts and advocacy','Leadership, Philanthropy',' https://i0.wp.com/www.thecourtjeweller.com/wp-content/uploads/2024/03/2024-0308-02-rania01.jpg?fit=1200%2C796&ssl=1');
+    // writeSuccessStory('3', 'Talal Abu-Ghazaleh', 'Talal Abu-Ghazaleh Story ', 'Talals impact in promoting intellectual property rights globally','Business, Intellectual Property','  https://en.ammonnews.net/img/big/20204281114RN841.jpeg?medium');
+    // writeSuccessStory('4', 'Rania Al-Abdullah', 'Rania Al-Abdullah Story ', 'Queen Ranias humanitarian efforts and advocacy','Leadership, Philanthropy',' https://i0.wp.com/www.thecourtjeweller.com/wp-content/uploads/2024/03/2024-0308-02-rania01.jpg?fit=1200%2C796&ssl=1');
+    // writeSuccessStory('5', 'Talal Abu-Ghazaleh', 'Talal Abu-Ghazaleh Story ', 'Talals impact in promoting intellectual property rights globally','Business, Intellectual Property','  https://en.ammonnews.net/img/big/20204281114RN841.jpeg?medium');
+    // writeSuccessStory('6', 'Rania Al-Abdullah', 'Rania Al-Abdullah Story ', 'Queen Ranias humanitarian efforts and advocacy','Leadership, Philanthropy',' https://i0.wp.com/www.thecourtjeweller.com/wp-content/uploads/2024/03/2024-0308-02-rania01.jpg?fit=1200%2C796&ssl=1');
+    // writeSuccessStory('7', 'Talal Abu-Ghazaleh', 'Talal Abu-Ghazaleh Story ', 'Talals impact in promoting intellectual property rights globally','Business, Intellectual Property','  https://en.ammonnews.net/img/big/20204281114RN841.jpeg?medium');
+    // writeSuccessStory('8', 'Rania Al-Abdullah', 'Rania Al-Abdullah Story ', 'Queen Ranias humanitarian efforts and advocacy','Leadership, Philanthropy',' https://i0.wp.com/www.thecourtjeweller.com/wp-content/uploads/2024/03/2024-0308-02-rania01.jpg?fit=1200%2C796&ssl=1');
+
+
+
+       writeSuccessStory(
+        "1",
+        "CRISTIANO RONALDO",
+        "The World at His Feet",
+        "A portrait of famed Portuguese soccer hero Cristiano Ronaldo charts his career and personal life, offering a glimpse of how he handles stardom.",
+        "sports",
+        "https://pics.filmaffinity.com/Cristiano_Ronaldo_The_World_at_His_Feet-395905301-large.jpg"
+      );
+      writeSuccessStory(
+        "2",
+        "Neymar Jr",
+        "The Great Brazilian Promise ",
+        "Neymar rises from humble beginnings to become a star with a carefully crafted image and worldwide brand. Yet criticism still follows him at every turn",
+        "sports", 
+      
+        " https://birlinn.co.uk/wp-content/uploads/2020/06/Neymar-e1599820915345.jpg"
+      );
+      writeSuccessStory(
+        "3",
+        "Pelé",
+        "Zero To Hero Story ",
+        "Against the backdrop of a turbulent era in Brazil, this documentary captures Pelé's extraordinary path from breakthrough talent to national hero",
+        "sports",
+        "   https://media2.firstshowing.net/firstshowing/img11/PeleNetflixDocMainposterbigimg5992.jpg"
+      );
+      writeSuccessStory(
+        "4",
+        "Leo Messi",
+        " Capitanes del Mundo ",
+        "Against the backdrop of a turbulent era in Brazil, this documentary captures Pelé's extraordinary path from breakthrough talent to national hero",
+        "sports",
+        " https://media.diariouno.com.ar/p/fcc862a4265b8a8b8101bef846aff7cc/adjuntos/298/imagenes/009/276/0009276847/1200x0/smart/messi-netflix-2jpg.jpg"
+      );
+
+     
+      writeSuccessStory(
+        "5",
+        "Hitler",
+        "Evil on Trial ",
+        "Hitler's turbulent childhood in Austria lays the foundation for strong political ambitions. The endof WWI ushers in a fraught new era for Germany",
+        "history",
+        "   https://images.justwatch.com/poster/316501751/s718/hitler-and-the-nazis-evil-on-trial.jpg"
+      );
+      writeSuccessStory(
+        "6",
+        "saddam hussein",
+        "How To Become A Tyrant ",
+        "You've secured your place at the top, butmaintaining power means watching yourback. Nobody did that better or moreruthlessly than Saddam Hussein.",
+        "history",
+        " https://www.tvguide.com/a/img/catalog/provider/1/3/1-11349393125.jpg"
+      );
+      writeSuccessStory(
+        "7",
+        "Che Guevara",
+        "patry or warm",
+        "After four centuries of Spanish colonial rule, Cubans win their independence, but US. interventionat the eleventh hour comes with a price.",
+        "history",
+        " https://m.media-amazon.com/images/M/MV5BMTNmZGY4OTctYjUwNi00ZjNmLTlmODItMDVhOGJmYThmMTU5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg"
+  );
+       writeSuccessStory(
+       "8",
+        "Queen Cleopatra",
+        "Cleopatra fights to protect her throne",
+       "As Egypt's last pharaoh, Cleopatra fights to protect her throne, family and legacy in this docudrama featuring reenactments and expert interviews.",
+       "history",
+      " https://i0.wp.com/filmonizirani.net/wp-content/uploads/2023/04/Queen-Cleopatra-Netflix-poster.jpg?ssl=1"
+    );
+      writeSuccessStory(
+      "9",
+        "Dirty Money",
+        "You need money To take money ",
+       " The Smartest Guys in the Room, Zero Days, and Going Clear Scientology & the Prison of Belief",
+       "Business",
+      " https://static0.colliderimages.com/wordpress/wp-content/uploads/2018/01/dirty-money-poster.jpg"
+    );
+
+    writeSuccessStory(
+      "10",
+        "Steve Jobs",
+        "The world is in your hands ",
+       "Three pivotal moments in the extraordinary life of complicated and charismatic Apple co-founder Steve Jobs play out in this acclaimed drama.",
+       "Business",
+      "https://images.moviepostershop.com/jobs-movie-poster-2013-1020755615.jpg"
+    );
+
+    writeSuccessStory(
+        "11",
+        "MADOFF",
+        "The Monster of Wall Street ",
+        "Starting his career in penny stock trades, Bernie Madoff builds a lucrative side business as an adviser, attracting clients with impressive returns.",
+        "Business",
+        "https://dnm.nflximg.net/api/v6/WNk1mr9x_Cd_2itp6pUM7-lXMJg/AAAABRnZCgQYwC7JfZ28kvJKP28xsPVIKu3yA3Us-t9yiv80kBd3KGiJ_e7F4pXy2Kdig5PwVHm-AFA1z0qGpHjmeDMz9CqFJy9tKy4QiEjNLwXAxANvhpuaYg2QpCyPGO-BX_8yww.jpg?r=939"
+      );
+      writeSuccessStory(
+        "12",
+        "Saving Capitalism",
+        "A Nation Divided by the Bottom Line ",
+        "Former Secretary of Labor Robert Reich meets with Americans from all walks of life as he chronicles a seismic shift in the nation's economy.",
+        "Business",
+        "https://behindthelensonline.net/site/wp-content/uploads/2017/11/saving-capitalism-one-sheet.jpg"
+      );
+</script>
+  
+
+
+
+
+</body>
+</html>
+
+

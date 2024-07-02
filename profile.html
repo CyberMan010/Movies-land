@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+  </head>
+  <body>
+    <div class="nav-wrapper">
+      <div class="container">
+          <div class="nav">
+              <a href="#" class="logo">
+                  <i class='bx bx-movie-play bx-tada  ' style="color:white"></i>Cine<span class="main-color">mantic</span>
+              </a>
+              <ul class="nav-menu" id="nav-menu">
+                  <li><a href="/index2.html">Home</a></li>
+                  <li><a href="/catalog.html">catalog</a></li>
+                  <li><a href="/contact.html">Contact</a></li>
+                  <li><a href="/index.html">Logout</a></li>
+                  
+              </ul>
+              <!-- MOBILE MENU TOGGLE -->
+              <div class="hamburger-menu" id="hamburger-menu">
+                  <div class="hamburger"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+
+
+    <h1 id="welcome-msg"></h1>
+<div class="profile-settings-container">
+    <h1>Profile Settings</h1>
+    <div class="imgAndFormContainer">
+      <div class="imgcontiner">
+        <!-- <img src="cnew.png" alt="" class="user-img"> -->
+        
+      </div>
+      <form id="profile-form">
+      <ul>
+        <li>
+          <!-- <label for="new-name">Edite Your Name :</label> -->
+          <input
+            type="text"
+            id="new-name"
+            class="new-name-input"
+            placeholder="New Name"
+            required
+          />
+        </li>
+        <li>
+          <!-- <label for="current-password">Current Password:</label> -->
+          <input
+            type="text"
+            id="current-password"
+            class="current-password-input"
+            placeholder="Current Password"
+            required
+          />
+        </li>
+        <li>
+          <!-- <label for="current-password">Current Password:</label> -->
+          <input
+            type="text"
+            id="new-password"
+            class="new-password-input"
+            placeholder="New Password"
+            required
+          />
+            <ul id="pass-criteria">
+              <li id="length">At least 8 characters long</li>
+              <li id="uppercase">At least one uppercase letter</li>
+              <li id="lowercase">At least one lowercase letter</li>
+              <li id="number">At least one number</li>
+              <li id="special">At least one special character</li>
+            </ul>
+        </li>
+        <li>
+          <!-- <label for="current-password">Current Password:</label> -->
+          <input
+            type="text"
+            id="confirm-password"
+            class="new-password-input"
+            placeholder="New Password"
+            required
+          />
+        </li>
+        <li>
+          <button type="button" class="save" id="save-btn">Save</button>
+        </li>
+      </ul>
+    </form>
+    </div>
+   
+  </div>
+</div>
+    
+    <script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getDatabase, ref, update } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_YpfJibbkrYiKtfpodbhCdF1KyF2Lbd0",
+            authDomain: "movies-1eeb9.firebaseapp.com",
+            databaseURL: "https://movies-1eeb9-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "movies-1eeb9",
+            storageBucket: "movies-1eeb9.appspot.com",
+            messagingSenderId: "265328814791",
+            appId: "1:265328814791:web:7bbcf5af8448ffd5b66ce2",
+            measurementId: "G-RRKSY9TQNR",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // استرجاع البيانات من sessionStorage وعرضها في النموذج
+        const userDataStr = sessionStorage.getItem("user");
+
+        if (userDataStr) {
+            const userData = JSON.parse(userDataStr);
+            const username = userData.username;
+            const password = userData.password;
+            document.getElementById("new-name").value = userData.username;        
+        } else {
+            console.log("No user data found in sessionStorage");
+        }
+        // =====================================================================================================================================
+
+        // تحديث البيانات في Firebase و sessionStorage
+
+
+        // const saveBtn = document.getElementById("save-btn");
+        // saveBtn.addEventListener("click", () => {
+        //     const newName = document.getElementById("new-name").value;
+        //     const newPassword = document.getElementById("new-password").value;
+
+        //     const userData = JSON.parse(sessionStorage.getItem("user"));
+        //     const emailKey = userData.email.replace(/\./g, "_"); // استخدام البريد الإلكتروني كمفتاح
+
+        //     const userRef = ref(database, "users/" + emailKey);
+
+        //     const updatedData = {
+        //       username: newName,
+        //       password: newPassword
+        //     };
+
+        //     update(userRef, updatedData)
+        //         .then(() => {
+        //             alert("Data updated successfully");
+        //             // تحديث البيانات في sessionStorage
+        //             userData.username = newName;
+        //             userData.password = newPassword;
+        //             sessionStorage.setItem("user", JSON.stringify(userData));
+        //         })
+        //         .catch((error) => {
+        //             console.error("Error updating data:", error);
+        //             alert("Error updating data:", error);
+        //         });
+        // });
+
+
+
+
+
+
+
+// Update data in Firebase and sessionStorage
+      const saveBtn = document.getElementById("save-btn");
+      saveBtn.addEventListener("click", () => {
+        const newName = document.getElementById("new-name").value;
+        const currentPassword = document.getElementById("current-password").value;
+        const newPassword = document.getElementById("new-password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+
+        const userData = JSON.parse(sessionStorage.getItem("user"));
+
+                // Check current password
+        if (currentPassword !== userData.password) {
+          alert("Current password is incorrect");
+          return;
+        }
+
+        // Check if new password and confirmation match
+        if (newPassword !== confirmPassword) {
+          alert("New password and confirmation do not match");
+          return;
+        }
+
+        // Define regex for password (example: at least 8 characters, including 1 uppercase, 1 lowercase, and 1 number)
+        const passwordRegex =   
+                   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        // Validate new password
+        if (!passwordRegex.test(newPassword)) {
+          alert("Password must be at least 8 characters long, include at least one uppercase letter, one lowercase letter, one number and one special character");
+          return;
+        }
+        
+        const emailKey = userData.email.replace(/\./g, "_"); // Use email as the key
+        const userRef = ref(database, "users/" + emailKey);
+        
+        const updatedData = {
+          username: newName,
+          password: newPassword
+        };
+        
+        update(userRef, updatedData)
+          .then(() => {
+            alert("Data updated successfully");
+            // Update data in sessionStorage
+            userData.username = newName;
+            userData.password = newPassword;
+            sessionStorage.setItem("user", JSON.stringify(userData));
+
+            
+          })
+          .catch((error) => {
+            console.error("Error updating data:", error);
+            alert("Error updating data:", error);
+          });
+        });
+        </script>
+  </body>
+  </html>
+  
+  
+  
+  
+  
+  
+  

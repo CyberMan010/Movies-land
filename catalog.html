@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catalog</title>
+    <link rel="stylesheet" href="style_catalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div class="container">
+            <div class="nav">
+                <a href="#" class="logo">
+                    <i class='bx bx-movie-play bx-tada  ' style="color:white"></i>Cine<span class="main-color">mantic</span>
+                </a>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="/index2.html">Home</a></li>
+                    <li><a href="/catalog.html">catalog</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/index.html">Logout</a></li>
+                    <li>
+                        <a href="profile.html" class="btn btn-hover">
+                            <span>Profile page</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- MOBILE MENU TOGGLE -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-content">
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+              
+            <section class="container">
+                <div class="col-sm" id="stream">
+     
+                </div>
+            </section>
+        </div>
+
+        <aside class="sidebar">
+            <section id="overview">
+                <h2>Cenimatic</h2>
+                <p>In the world of documentaries, there are many different categories, and they are all here for us to enjoy.</p>
+            </section>
+            
+            <section id="search">
+                <h2>Search for Documentary</h2>
+                <form id="search-form">
+                  <input type="text" id="search-input" placeholder="Search by title, genre, etc.">
+                </form>
+              </section>
+              
+              <div id="stream"></div>
+            
+            <section id="categories">
+                <h2>The Best Ever</h2>
+                <div id="top-3">Top 3 Documentary</div>
+                <div id="most-viewed">Most viewed</div>
+                <div id="only-in-xyz">Only in Cenimatic</div>
+               
+                <h2>Documentary Categories</h2>
+                
+                    <div id="sports">Sports</div>
+                    <div id="historical">Historical</div>
+                    <div id="business">Business</div>
+                    
+            
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cinematic. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="app_catalog.js"></script>
+</body>
+</html>

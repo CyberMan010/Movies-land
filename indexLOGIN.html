@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styleLogin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login">
+      <h1>Login</h1>
+      <form id="loginForm">
+        <ul>
+          <li>
+            <input
+              type="email"
+              id="email"
+              class="email"
+              placeholder="Email Address"
+              required
+            />
+          </li>
+          <li>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <a href="#" class="forgot-password">Forgot password?</a>
+          </li>
+          <li>
+            <button type="submit">Login</button>
+          </li>
+          <li>
+            <p>
+              Not a member? <a href="signUP.html" class="signup">Sign up now</a>
+            </p>
+          </li>
+        </ul>
+      </form>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        get,
+        child,
+      } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyC_YpfJibbkrYiKtfpodbhCdF1KyF2Lbd0",
+        authDomain: "movies-1eeb9.firebaseapp.com",
+        databaseURL:
+          "https://movies-1eeb9-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "movies-1eeb9",
+        storageBucket: "movies-1eeb9.appspot.com",
+        messagingSenderId: "265328814791",
+        appId: "1:265328814791:web:7bbcf5af8448ffd5b66ce2",
+        measurementId: "G-RRKSY9TQNR",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+      const userDataStr = sessionStorage.getItem("user");
+
+      if (userDataStr) {
+        const userData = JSON.parse(userDataStr);
+        let username = userData.username;
+
+        const welcomeMsgElement = document.getElementById("welcome-msg");
+
+        welcomeMsgElement.innerHTML = "Welcome back, " + username + "!";
+      } else {
+        console.log("No user data found in sessionStorage");
+      }
+
+      const loginForm = document.querySelector("#loginForm");
+loginForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const email = loginForm["email"].value;
+  const password = loginForm["password"].value;
+
+  const usersRef = ref(database, "users");
+  get(child(usersRef, email.replace(/\./g, "_")))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        const userData = snapshot.val();
+        if (userData.password === password) {
+          alert("Login successful");
+
+          // Store user data in sessionStorage
+          const userDataToStore = {
+            email: email,
+            password: password  // You might want to consider not storing the password
+          };
+          sessionStorage.setItem("user", JSON.stringify(userDataToStore));
+
+          // Redirect to home page
+          window.location.href = "home.html";
+        } else {
+          console.error("Incorrect password");
+          alert("Incorrect password. Please try again.");
+        }
+      } else {
+        console.error("User not found");
+        alert("User not found. Please sign up first.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching user data:", error);
+      alert("Error fetching user data. Please try again later.");
+    });
+});
+
+    </script>
+  </body>
+</html>
+      

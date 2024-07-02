@@ -29,9 +29,7 @@ function createCard(data, key) {
     <div class="tags">
       <a href="details.html" class="buttonDetails" onclick='storeData(${JSON.stringify(data)})'>MORE DETAILS</a>
     </div>
-    <div class="info">
-      <p>${data.story}</p>
-    </div>
+ 
   `;
   card.appendChild(details);
 

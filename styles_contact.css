@@ -21,21 +21,13 @@ body{
 }
 
 .StreamsHero-image {
-  /* Wave Color */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#59adeb+0,42c2b5+52,34ce93+100 */
   background: #59adeb;
-  /* Old browsers */
   background: -moz-linear-gradient(-45deg, #59adeb 0%, #42c2b5 52%, #34ce93 100%);
-  /* FF3.6-15 */
   background: -webkit-linear-gradient(-45deg, #59adeb 0%, #42c2b5 52%, #34ce93 100%);
-  /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, #59adeb 0%, #42c2b5 52%, #34ce93 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#59adeb', endColorstr='#34ce93', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
   background-size: 350% 350%;
   animation: waveColors 8s ease infinite;
-  /* End Wave Color */
   position: absolute;
   top: 0;
   left: 0;
@@ -59,16 +51,15 @@ body{
   font-weight: 200;
   line-height: 28px;
   opacity: .7;
-  -ms-filter: "alpha(opacity=70)";
   transition: opacity 300ms linear;
   padding-bottom: 2em;
 }
 
 
-/* Buttons */
+
 
 .Button {
-  -webkit-appearance: none;
+  
   background: transparent;
   border-color: currentcolor;
   border-style: solid;
@@ -804,8 +795,8 @@ a {
 
 
 
-/* Media Query For different screens */
-@media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+@media (min-width:320px) and (max-width:479px)  {
   .footer-content {
     margin-left: auto;
     margin-right: auto;
@@ -814,7 +805,7 @@ a {
     position: relative;
   }
 }
-@media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px) and (max-width:599px)  { 
   .footer-content {
     margin-left: auto;
     margin-right: auto;
@@ -823,7 +814,7 @@ a {
     position: relative;
   }
 }
-@media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px) and (max-width: 800px)  { 
   .footer-content {
     margin-left: auto;
     margin-right: auto;
@@ -832,14 +823,12 @@ a {
     position: relative;
   }
 }
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px)  { 
 
 }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
-
+@media (min-width:1025px) {
 }
-@media (min-width:1281px) { /* hi-res laptops and desktops */
-
+@media (min-width:1281px) {
 }
 
 
@@ -863,9 +852,7 @@ a {
   }
 }
 @media (min-width: 568px) {
-  /* .footer-content-column {
-      width: 49.99%;
-  } */
+  
 }
 
 @import url("https://fonts.googleapis.com/css?family=PT+Sans");
@@ -1257,7 +1244,6 @@ ul {
   }
   
   
-  /* for max-width 920px */
   @media screen and (min-width: 600px) and (max-width: 950px) {
     .head {
       width: 100%;
@@ -1568,8 +1554,8 @@ ul {
   
   
   
-  /* Media Query For different screens */
-  @media (min-width:320px) and (max-width:479px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+  @media (min-width:320px) and (max-width:479px)  { 
     .footer-content {
       margin-left: auto;
       margin-right: auto;
@@ -1578,7 +1564,7 @@ ul {
       position: relative;
     }
   }
-  @media (min-width:480px) and (max-width:599px)  { /* smartphones, Android phones, landscape iPhone */
+  @media (min-width:480px) and (max-width:599px)  { 
     .footer-content {
       margin-left: auto;
       margin-right: auto;
@@ -1587,7 +1573,7 @@ ul {
       position: relative;
     }
   }
-  @media (min-width:600px) and (max-width: 800px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+  @media (min-width:600px) and (max-width: 800px)  { 
     .footer-content {
       margin-left: auto;
       margin-right: auto;
@@ -1596,13 +1582,13 @@ ul {
       position: relative;
     }
   }
-  @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+  @media (min-width:801px)  { 
   
   }
-  @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+  @media (min-width:1025px) { 
   
   }
-  @media (min-width:1281px) { /* hi-res laptops and desktops */
+  @media (min-width:1281px) { 
   
   }
   @media (min-width: 760px) {
@@ -1623,9 +1609,7 @@ ul {
     }
   }
   @media (min-width: 568px) {
-    /* .footer-content-column {
-        width: 49.99%;
-    } */
+    
   }
   
   @import url("https://fonts.googleapis.com/css?family=PT+Sans");

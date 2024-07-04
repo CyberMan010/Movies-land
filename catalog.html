@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Catalog</title>
-    <link rel="stylesheet" href="style_catalog.css">
+    <title>XYZ documentaries</title>
+    <link rel="stylesheet" href="catalog-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
@@ -17,9 +17,16 @@
                     <i class='bx bx-movie-play bx-tada  ' style="color:white"></i>Cine<span class="main-color">mantic</span>
                 </a>
                 <ul class="nav-menu" id="nav-menu">
+<!-- <<<<<<< husban -->
+                    <li><a href="/homepage - Copy/index2.html">Home</a></li>
+                    <li><a href="/homepage - Copy/catalogpage/catalog.html">catalog</a></li>
+                    <li><a href="/homepage - Copy/contact.html">Contact</a></li>
+                    <li><a href="/homepage - Copy/index.html">Logout</a></li>
+<!-- ======= -->
                     <li><a href="/index2.html">Home</a></li>
                     <li><a href="/catalog.html">catalog</a></li>
                     <li><a href="/contact.html">Contact</a></li>
+<!-- >>>>>>> main -->
                     <li>
                         <a href="profile.html" >
                           <!-- <span>Profile page</span> -->
@@ -55,6 +62,7 @@
             </div>
         </div>
     </div>
+    
 
     <div class="wrapper">
         <div class="main-content">
@@ -73,12 +81,11 @@
 
         <aside class="sidebar">
             <section id="overview">
-                <h2>Cenimatic</h2>
-                <p>In the world of documentaries, there are many different categories, and they are all here for us to enjoy.</p>
+                
             </section>
             
             <section id="search">
-                <h2>Search for Documentary</h2>
+                <h2>Search for Documentary</h2><br>
                 <form id="search-form">
                   <input type="text" id="search-input" placeholder="Search by title, genre, etc.">
                 </form>
@@ -90,7 +97,7 @@
                 <h2>The Best Ever</h2>
                 <div id="top-3">Top 3 Documentary</div>
                 <div id="most-viewed">Most viewed</div>
-                <div id="only-in-xyz">Only in Cenimatic</div>
+                <div id="view-all">All movie</div>
                
                 <h2>Documentary Categories</h2>
                 
@@ -102,16 +109,87 @@
             </section>
         </aside>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Cinematic. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+    <button class="bn5" role="button" id="only-in-xyz" style="width: 80px; margin-left: 50%; color: rgb(0, 0, 0); background-color: rgb(27, 206, 203);;" >UP</button>
+    <div class="pg-footer">
+       
+        <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+          <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+        </svg>
+        <div class="footer-content">
+          <div class="footer-content-column">
+            <div class="footer-logo">
+              <a class="footer-logo-link" href="index2.html">
+                <span class="hidden-link-text"></span>
+                <h1>Cinemantic</h1>
+              </a>
+            </div>
+            <div class="footer-menu">
+              
+              <ul id="menu-get-started" class="footer-menu-list">
+                <li class="menu-item menu-item-type-post_type menu-item-object-product">
+              
+                </li>
+              
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              <h2 class="footer-menu-name"> Company</h2>
+              <ul id="menu-company" class="footer-menu-list">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                  <a>Amman</a>
+                </li>
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                  <a href="#">Jo</a>
+                </li>
+           
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <h2 class="footer-menu-name"> Legal</h2>
+              <ul id="menu-legal" class="footer-menu-list">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
+                  <a href="/Privacy.html">Privacy Notice</a>
+                </li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                  <a href="/Privacy.html">Terms of Use</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-menu">
+              <h2 class="footer-menu-name"> Quick Links</h2>
+              <ul id="menu-quick-links" class="footer-menu-list">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                  <a target="_blank" rel="noopener noreferrer" href="catalog.html">Catalog </a>
+                </li>
+        
+                </li>
+            
+      
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-content-column">
+            <div class="footer-call-to-action">
+              
+              
+              <a class="footer-call-to-action-button button" href="contact.html" target="_self"> Get in Touch </a>
+            </div>
+            <div class="footer-call-to-action">
+              <h2 class="footer-call-to-action-title"> You Call Us</h2>
+              <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:+9627777774" target="_self"> +96277777774 </a></p>
+            </div>
+          </div>
+          
         </div>
-    </footer>
+    
+    
+    </div>
 
-    <script src="app_catalog.js"></script>
+    <script src="catalog-appjs.js"></script>
 </body>
 </html>

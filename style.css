@@ -163,10 +163,26 @@ body {
   transition: all 0.4s ease;
 }
 .buttonDetails{
-     padding: 2%;
-    background-color:  rgba(98, 219, 190, 1);
-    color:#000;
-    transform:scale(1.1);
+  background:  rgba(98, 219, 190, 1);
+  border: 0;
+  border-radius: 12px;
+  margin-top: 8%;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation; 
+  white-space: nowrap; 
 }
 
 .details h2 {

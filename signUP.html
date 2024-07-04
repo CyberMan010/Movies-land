@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles_signUP.css" />
+    <script
+      src="https://kit.fontawesome.com/167465bddc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div></div>
+    <div class="containerout">
+      <div class="container">
+        <img src="new.png" alt="" class="addValue" id="imageSlider" />
+        <div class="form-container">
+          <h2>Signup</h2>
+          <form action="#" method="POST" id="signupForm" class="signupForm">
+            <div class="form-group">
+              <i class="fa-solid fa-user" style="color: aliceblue"></i>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+              />
+              <p id="sms"></p>
+            </div>
+            <div class="form-group">
+              <i class="fa-regular fa-envelope" style="color: aliceblue"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-lock" style="color: aliceblue"></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+
+              <ul id="pass-criteria">
+                <li id="length">At least 8 characters long</li>
+                <li id="uppercase">At least one uppercase letter</li>
+                <li id="lowercase">At least one lowercase letter</li>
+                <li id="number">At least one number</li>
+                <li id="special">At least one special character</li>
+              </ul>
+              <p id="passmsg"></p>
+            </div>
+            <div class="form-group">
+              <i class="fa-solid fa-unlock" style="color: aliceblue"></i>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Confirm Password"
+                required
+              />
+              <p id="cpassmsg"></p>
+            </div>
+            <div class="form-group">
+              <i class="fa-regular fa-circle-user" style="color: aliceblue"></i>
+              <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Age"
+                required
+              />
+            </div>
+            <button type="submit" class="btn" id="btnnn">Signup</button>
+            <p class="login-link">
+              Already have an account? <a href="indexLOGIN.html">Login here</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="app_sigup.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        set,
+        get,
+      } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyC_YpfJibbkrYiKtfpodbhCdF1KyF2Lbd0",
+        authDomain: "movies-1eeb9.firebaseapp.com",
+        databaseURL:
+          "https://movies-1eeb9-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "movies-1eeb9",
+        storageBucket: "movies-1eeb9.appspot.com",
+        messagingSenderId: "265328814791",
+        appId: "1:265328814791:web:7bbcf5af8448ffd5b66ce2",
+        measurementId: "G-RRKSY9TQNR",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+
+      function validtion(event) {
+        event.preventDefault();
+
+        const userReg = /^[A-Za-z]+$/;
+        const passReg =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        let userName = document.getElementById("username");
+        let password = document.getElementById("password");
+        let confirmPassword = document.getElementById("confirm-password");
+        let sms = document.getElementById("sms");
+        let passMsg = document.getElementById("pass-criteria");
+        let cpassmsg = document.getElementById("cpassmsg");
+
+        let lengthCriteria = document.getElementById("length");
+        let uppercaseCriteria = document.getElementById("uppercase");
+        let lowercaseCriteria = document.getElementById("lowercase");
+        let numberCriteria = document.getElementById("number");
+        let specialCriteria = document.getElementById("special");
+
+        let isValid = true;
+
+        if (!userReg.test(userName.value)) {
+          sms.innerHTML = "User Name not correct: It must contain letters only";
+          sms.style.color = "red";
+          isValid = false;
+        } else {
+          sms.innerHTML = "";
+        }
+
+        passMsg.style.display = "inline";
+        if (password.value.length >= 8) {
+          lengthCriteria.style.color = "green";
+        } else {
+          lengthCriteria.style.color = "red";
+          isValid = false;
+        }
+
+        if (/[A-Z]/.test(password.value)) {
+          uppercaseCriteria.style.color = "green";
+        } else {
+          uppercaseCriteria.style.color = "red";
+          isValid = false;
+        }
+
+        if (/[a-z]/.test(password.value)) {
+          lowercaseCriteria.style.color = "green";
+        } else {
+          lowercaseCriteria.style.color = "red";
+          isValid = false;
+        }
+
+        if (/\d/.test(password.value)) {
+          numberCriteria.style.color = "green";
+        } else {
+          numberCriteria.style.color = "red";
+          isValid = false;
+        }
+
+        if (/[@$!%*?&]/.test(password.value)) {
+          specialCriteria.style.color = "green";
+        } else {
+          specialCriteria.style.color = "red";
+          isValid = false;
+        }
+
+        if (password.value !== confirmPassword.value) {
+          cpassmsg.innerHTML = "Password not match";
+          cpassmsg.style.color = "red";
+          isValid = false;
+        } else {
+          cpassmsg.innerHTML = "";
+        }
+
+        return isValid;
+      }
+
+      const signupForm = document.querySelector("#signupForm");
+      signupForm.addEventListener("submit", function (event) {
+        if (!validtion(event)) {
+          return;
+        }
+
+        const username = signupForm["username"].value;
+        const email = signupForm["email"].value;
+        const password = signupForm["password"].value;
+        const confirmPassword = signupForm["confirm-password"].value;
+        const age = signupForm["age"].value;
+
+        const emailKey = email.replace(/\./g, "_");
+        const usersRef = ref(database, "users/" + emailKey);
+
+        // Check if email already exists
+        get(usersRef)
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              alert("Email already registered. Please use a different email.");
+            } else {
+              set(usersRef, {
+                username: username,
+                email: email,
+                age: age,
+                password: password,
+              })
+                .then(() => {
+                  alert("Data saved successfully");
+                  const userData = {
+                    username: username,
+                    email: email,
+                    age: age,
+                    password: password,
+                  };
+                  let userDataTOs = JSON.stringify(userData);
+                  sessionStorage.setItem("user", userDataTOs);
+                  window.location.href = "index2.html";
+                })
+                .catch((error) => {
+                  console.error("Error saving data:", error);
+                  alert("Error saving data:", error);
+                });
+            }
+          })
+          .catch((error) => {
+            console.error("Error checking email:", error);
+            alert("Error checking email:", error);
+          });
+      });
+    </script>
+  </body>
+</html>
